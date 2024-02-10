@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import spotipy
 
-SPOTIPY_CLIENT_ID = "6be83e1377b4475096a8d1fa9602a7a1"
-SPOTIPY_CLIENT_SECRET = "c137d3ee65e94b7eb3c0697c73eb5121"
+SPOTIPY_CLIENT_ID = Your own Spotipy ID
+SPOTIPY_CLIENT_SECRET = Your own Spotipy Secret
 SPOTIPY_REDIRECT_URI = "https://example.com/"
 
 date = input("Which year do you want to travel to? (YYYY-MM-DD)")
@@ -20,7 +20,7 @@ for song in chart_results:
 
 scope = "playlist-modify-private"
 sp_oauth = spotipy.oauth2.SpotifyOAuth(
-    SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, SPOTIPY_REDIRECT_URI,scope=scope, cache_path="token.txt", show_dialog=True
+    SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, SPOTIPY_REDIRECT_URI, scope=scope, cache_path="token.txt", show_dialog=True
 )
 token = sp_oauth.get_access_token(as_dict=False)
 
